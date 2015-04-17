@@ -16,6 +16,15 @@ public class Application {
 	String home(){
 		return "<h2> API Math Operation & Words Operation Web Services.</h2>";
 	}
+	@RequestMapping("/{wordOpt}/{word}/{mathOpt}/{a}/{b}")
+	String doOperations(@PathVariable(value="wordOpt") String wordOpt,
+			@PathVariable(value="word") String word,
+			@PathVariable(value="matOpt") String mathOpt,
+			@PathVariable(value="a") Integer a,
+			@PathVariable(value="b") Integer b){
+	
+	return "{\"words\":{\"operation\":\"revert\",\"result\":\"2\"},\"math\":{\"operation\":\"1+1\",\"result\":\"2\"}}";
+	}
 
 public static void main(String[] args){
 	SpringApplication.run(Application.class, args);
