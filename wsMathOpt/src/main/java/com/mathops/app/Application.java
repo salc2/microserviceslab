@@ -16,23 +16,23 @@ public class Application {
 	}
 	@RequestMapping("/add/{a}/{b}")
 	Result doAdd(@PathVariable(value="a") Integer a,
-			@PathVariable(value="b") Integer b){
+			@PathVariable(value="b") Integer b) throws Exception{
 		return OptsService.add(a,b);
 	}
 
 	@RequestMapping("/sust/{a}/{b}")
 	Result doSust(@PathVariable(value="a") Integer a,
-			@PathVariable(value="b") Integer b){
+			@PathVariable(value="b") Integer b) throws Exception {
 		return OptsService.sust(a,b);
 	}
 	@RequestMapping("/mult/{a}/{b}")
 	Result doMult(@PathVariable(value="a") Integer a,
-			@PathVariable(value="b") Integer b){
+			@PathVariable(value="b") Integer b) throws Exception {
 		return OptsService.mult(a,b);
 	}
 	@RequestMapping("/div/{a}/{b}")
 	Result doDiv(@PathVariable(value="a") Integer a,
-			@PathVariable(value="b") Integer b){
+			@PathVariable(value="b") Integer b) throws Exception {
 		return OptsService.div(a,b);
 	}
 public static void main(String[] args){

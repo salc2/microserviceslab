@@ -44,6 +44,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 		"/{wordOpt}/{word}/{mathOpt}/{a}/{b}","revert","javier","add","1","1")
 				.accept(MediaType.APPLICATION_JSON))
 			.andDo(print()).andExpect(content().string(
-	equalTo("{\"words\":{\"operation\":\"revert\",\"result\":\"2\"},\"math\":{\"operation\":\"1+1\",\"result\":\"2\"}}")));
+	equalTo("{\"wordOpt\":{\"operation\":\"revert\",\"result\":\"2\"},\"mathOpt\":{\"operation\":\"1+1\",\"result\":\"2\"}}")));
 	}
 	}
